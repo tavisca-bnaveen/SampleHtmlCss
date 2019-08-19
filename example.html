@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <style>
+        .header{
+            background-color:gray;
+            font-size: 2vw;
+            padding: 0px;
+            height: 100px;
+            overflow: hidden;
+            top: 0%;
+            margin: 0%;
+            width: 100%;
+            
+        }
+        .footer{
+            background-color: gray;
+            padding: 20px;
+            font-size: 2vw;
+            overflow: hidden;
+            
+            bottom: 0%;
+            margin: 0%;
+            width: 97%;
+            
+        }
+        .footer ul{
+            margin: 0;
+            padding: 0;
+            
+            
+            
+        }
+        .footer ul li{
+            padding-left: 200px;
+            display: inline;
+            padding-right: 100px;
+            font-size: 20px;
+            
+            
+            
+        }
+        .nav-left{
+            float: left;
+            width: 20%;
+            height: 420px;
+        
+            overflow: hidden;
+            
+            background-color:lavender;
+            
+        }
+        a li{
+            
+            list-style-type: none;
+            margin: 20px;
+            
+            text-decoration: none;
+            display: block;
+            padding: 15px ;
+            border: 2px solid black;
+            color: #000;
+            padding-left: 0%;
+            text-align: center;
+            align-content: center;
+            
+        }
+        a{
+            text-decoration: none; 
+            
+        }
+        a li:hover{
+            background-color: green;
+            
+        }
+        p{
+            padding-left: 120px;
+        }
+        
+        .nav-right{
+            float: left;
+            width: 80%;
+            
+            height: 420px;
+            
+            overflow: hidden;
+            
+            background-color:white;
+
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+         padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <div  class="header">
+            <img src="0.png" alt="Tavisca"  width= "100px" height="100px">
+     </div>
+    
+        <div class="nav-left">
+                <ul>
+                        <a href="#TODO " ><li >TODO</li></a>
+                        <a href="#USER " ><li>USER</li></a>
+                        <a href="#LOGIN "><li>LOGIN</li></a>
+                </ul>
+            </div>
+            <div class="nav-right">
+                    <div id="TODO" style="height: 450px">
+                        <h2 style="align-content: center">ToDo List</h2>
+                             <input type="text" name="text"> <input type="submit" name="add" value="ADD">
+                                <br>
+                                <br>
+                                <table>
+                                        <tr>
+                                          <th>Name</th>
+                                          <th>Book</th>
+                                          <th>Edit</th>
+                                        </tr>
+                                        <tr>
+                                          <td>Naveen</td>
+                                          <td>3 mistakes</td>
+                                          <td><input type="submit" name="edit" value="Edit"></td>
+                                        </tr>
+                                        <tr>
+                                          <td>akhil</td>
+                                          <td>half girlfriend</td>
+                                          <td><input type="submit" name="edit" value="Edit"></td>
+                                        </tr>
+                                        <tr>
+                                          <td>anudeep</td>
+                                          <td>one indian girl</td>
+                                          <td><input type="submit" name="edit" value="Edit"></td>
+                                        </tr>
+                                        </table>
+                         </div>
+                    
+                    <div id="USER" style="height: 450px">
+                            <h1 ><p>User Details</p></h1>
+                            <br>
+                            <h2 > <p>Name    : Bora Naveen<br><br>
+                                Age     : 21<br><br>
+                                Username: Naveenbora143</p></h2>
+                            </div>
+                            <div id="LOGIN" style="height: 450px">
+                                    <h1> <p> LOGIN</p></h1>
+                                <h3><form>
+                                  <p> Name <input type="text" name="name"><br><br></p>
+                                  <p> Password <input type="password" name="password"><br><br></p>
+                                  <p><input type="submit" name="submit" value="submit"></p>
+                                    </form></h3>
+                                    </div>
+                            </div>
+
+    
+    
+    <div  class="footer">
+            <ul>
+                    <a href="example.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;">HOME</li></a>
+                    <a href="About.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;">ABOUT</li></a>
+                    <a href="Contact.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;">CONTACT US</li></a>
+                    </ul>
+    </div>
+</body>
+</html>
