@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>form</title>
     <style>
+        
+            .grid-item {
+                
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                
+                
+                }
+            .grid-item-middle{
+                display: grid;
+                grid-template-columns: 20% 80%;
+                
+                
+            
+                
+            }
         .header{
             background-color:gray;
             font-size: 2vw;
@@ -46,7 +63,7 @@
         }
         .nav-left{
             float: left;
-            width: 20%;
+            
             height: 420px;
         
             overflow: hidden;
@@ -83,7 +100,7 @@
         
         .nav-right{
             float: left;
-            width: 80%;
+            
             
             height: 420px;
             
@@ -110,10 +127,11 @@
         </style>
 </head>
 <body>
+    
     <div  class="header">
             <img src="0.png" alt="Tavisca"  width= "100px" height="100px">
      </div>
-    
+        <div class="grid-item-middle">
         <div class="nav-left">
                 <ul>
                         <a href="#TODO " ><li >TODO</li></a>
@@ -149,8 +167,7 @@
                                           <td><input type="submit" name="edit" value="Edit"></td>
                                         </tr>
                                         </table>
-                         </div>
-                    
+                         </div>   
                     <div id="USER" style="height: 450px">
                             <h1 ><p>User Details</p></h1>
                             <br>
@@ -167,6 +184,7 @@
                                     </form></h3>
                                     </div>
                             </div>
+        </div>
 
     
     
