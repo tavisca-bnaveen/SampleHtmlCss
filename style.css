@@ -1,0 +1,165 @@
+.grid-item {
+                
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    
+    
+    }
+.grid-item-middle{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+   }
+.header{
+background-color:gray;
+font-size: 2vw;
+padding: 0px;
+height: 100px;
+overflow: hidden;
+top: 0%;
+margin: 0%;
+width: 100%;
+
+}
+.footer{
+background-color: gray;
+padding: 20px;
+font-size: 2vw;
+overflow: hidden;
+
+bottom: 0;
+margin: 0%;
+width: 97%;
+
+}
+.footer ul{
+margin: 0;
+padding: 0;
+
+
+
+}
+.footer ul li{
+padding-left: 200px;
+display: inline;
+padding-right: 100px;
+font-size: 20px;
+
+
+
+}
+.nav-left{
+float: left;
+
+height: 470px;
+
+overflow: hidden;
+
+background-color:lavender;
+
+}
+a li{
+
+list-style-type: none;
+margin: 20px;
+
+text-decoration: none;
+display: block;
+padding: 15px ;
+border: 2px solid black;
+color: #000;
+padding-left: 0%;
+text-align: center;
+align-content: center;
+
+}
+a{
+text-decoration: none; 
+
+}
+a li:hover{
+background-color:rgb(185, 181, 181);
+
+}
+p{
+padding-left: 120px;
+color: black;
+}
+
+.nav-right{
+float: left;
+
+
+height: 470px;
+
+overflow: auto;
+
+background-color:white;
+
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+th{
+    border: 1px solid #dddddd;
+    background-color: slategray;
+    text-align: left;
+    padding: 8px;  
+}
+td  {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(247, 250, 245);
+}
+tr:nth-child(odd) {
+    background-color:rgb(247, 250, 245);
+}
+.text-box{
+border-radius: 5px;
+border-color: gray;
+
+}
+.text-box1{
+    width: 30%;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+.heightdiv
+{
+    height: 470px;
+    margin-bottom: 470px;
+}
+button{
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px ;
+
+}
+button:hover{
+    background-color: rgb(185, 181, 181);
+}
+button:focus{
+    outline: none;
+}
+.edit-color{
+    background-color:gray ;
+
+}
+.edit-color:hover{
+    background-color:rgb(185, 181, 181);
+}
+.delete-color{
+    background-color:gray;     
+}
+.delete-color:hover{
+    background-color:rgb(185, 181, 181);      
+}
+
+
