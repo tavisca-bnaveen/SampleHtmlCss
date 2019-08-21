@@ -12,10 +12,10 @@
 
    }
 .header{
-background-color:gray;
+background-color:rgba(37, 30, 30, 0.877);
 font-size: 2vw;
 padding: 0px;
-height: 100px;
+height: 80px;
 overflow: hidden;
 top: 0%;
 margin: 0%;
@@ -23,7 +23,7 @@ width: 100%;
 
 }
 .footer{
-background-color: gray;
+background-color:rgba(37, 30, 30, 0.877);
 padding: 20px;
 font-size: 2vw;
 overflow: hidden;
@@ -52,7 +52,7 @@ font-size: 20px;
 .nav-left{
 float: left;
 
-height: 470px;
+height: 490px;
 
 overflow: hidden;
 
@@ -72,10 +72,12 @@ color: #000;
 padding-left: 0%;
 text-align: center;
 align-content: center;
+border-radius: 6px;
 
 }
 a{
 text-decoration: none; 
+
 
 }
 a li:hover{
@@ -86,12 +88,14 @@ p{
 padding-left: 120px;
 color: black;
 }
-
+span{
+    padding-left: 120px;   
+}
 .nav-right{
 float: left;
 
 
-height: 470px;
+height: 490px;
 
 overflow: auto;
 
@@ -126,6 +130,12 @@ border-radius: 5px;
 border-color: gray;
 
 }
+.side{
+    border-radius: 4px;
+}
+.text-box:focus{
+    outline: none;
+}
 .text-box1{
     width: 30%;
     padding-top: 10px;
@@ -133,7 +143,7 @@ border-color: gray;
 }
 .heightdiv
 {
-    height: 470px;
+    height: 500px;
     margin-bottom: 470px;
 }
 button{

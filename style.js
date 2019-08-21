@@ -1,7 +1,9 @@
+    var books=["3mistakes","half girlfriend"];
     function AddTodo()
     {
         var matter=document.getElementById("clicks");
         var book=matter.value;
+        books.push(book);
         if(book){
         var d= new Date();
         var date=d.getDate()+"-"+d.getMonth()+"-"+d.getFullYear();
@@ -49,9 +51,11 @@
     
 function remove(name)
 { 
+    var text_value=name.parentElement.previousElementSibling.previousElementSibling.textContent;
+    var present=books.indexOf(text_value);
+    books.splice(present,1);
     name.parentElement.parentElement.remove();   
 }
-
 function EDIT(name)
 {
     var edit=name.parentElement;
@@ -59,11 +63,16 @@ function EDIT(name)
     var date=book.previousElementSibling;
     var input_book=document.createElement("input");
     input_book.setAttribute("type","text");
+    input_book.classList.add("text-box");
     input_book.setAttribute("value",book.textContent);
-    book.replaceChild(input_book,book.childNodes[0]);
 
+    book.replaceChild(input_book,book.childNodes[0]);
+    var present=books.indexOf(book.textContent);
+    books.splice(present,1);
+     
     var input_date=document.createElement("input");
     input_date.setAttribute("type","text");
+    input_date.classList.add("text-box");
     input_date.setAttribute("value",date.textContent);
     date.replaceChild(input_date,date.childNodes[0]);
 
@@ -82,6 +91,7 @@ function Change(x)
     
     var book= x.parentElement.previousElementSibling;
     var booktext=x.parentElement.previousElementSibling.childNodes[0].value;
+    books.push(booktext);
     book.innerHTML=booktext;
     var date=x.parentElement.previousElementSibling.previousElementSibling;
     var datetext=x.parentElement.previousElementSibling.previousElementSibling.childNodes[0].value;
@@ -103,5 +113,36 @@ function Validate(element)
         window.alert("Invalid format for credentials");
     else
         window.alert("success");
+
+}
+
+function Focus(element)
+{
+    var divid=document.getElementById("focuselements");
+    divid.innerHTML="";  
+    var textvalue=element.value;
+    let arraybooks=[];
+    if(textvalue!="")
+    {
+        for(var item in books)
+        {
+            if(books[item].indexOf(textvalue)!=-1)
+            {
+                arraybooks.push(books[item]);
+            }
+        }
+              
+        for(var item in arraybooks)
+        {
+            var spanelement=document.createElement("span");
+            var spantext=document.createTextNode(arraybooks[item])
+            spanelement.appendChild(spantext);
+            divid.appendChild(spanelement);
+            divid.appendChild(document.createElement("br"));
+
+        }
+
+        //console.log(arraybooks);
+    }
 
 }
