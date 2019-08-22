@@ -27,8 +27,8 @@
                         <h2 style="align-content: center"><p>To Do List</p></h2>
                             <p > <input type="text" name="text" class="text-box" onkeyup="Focus(this)"  id="clicks">
                                 
-                                <button type="button" class="text-box" onclick="AddTodo()">ADD</button>
-                                <div id="focuselements"></div></p>
+                                <button type="button" class="text-button"  onclick="AddTodo(this.previousElementSibling.value)">ADD</button>
+                                <button type="button" class="text-button" onclick="fetch()">Fetch</button></p>
                                 <br>
 
                                 <table id="tablename">

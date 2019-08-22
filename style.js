@@ -1,8 +1,7 @@
     
-    function AddTodo()
+    function AddTodo(fetchs)
     {
-        var matter=document.getElementById("clicks");
-        var book=matter.value;
+        var book=fetchs;
         
         if(book){
         var d= new Date();
@@ -47,7 +46,7 @@
 
         Table.appendChild(tr);
         }
-        
+         
     }
               
     
@@ -81,9 +80,6 @@ function EDIT(name)
     save_button.appendChild(save);
     edit.replaceChild(save_button,edit.childNodes[0]);
     save_button.setAttribute("onclick","Change(this)");
-    
-
-
 }
 function Change(x)
 {
@@ -123,7 +119,7 @@ function Focus(element)
     var divid=document.getElementById("tablename");
     let tablelen=document.getElementsByTagName("tr");
     var textvalue=element.value;
-    if(tablelen.length>1 && textvalue.length>0)
+    if(tablelen.length>1 )
     {
     for(var i=1;i<tablelen.length;i++)
     {
@@ -137,3 +133,19 @@ function Focus(element)
     }
     }
 }
+function fetch()
+{
+    var xmlhttp = new XMLHttpRequest();
+ xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+ xmlhttp.send();
+ xmlhttp.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+ var myObj = JSON.parse(this.responseText);
+ for(var i=0;i<myObj.length;i++){
+    AddTodo(myObj[i].title);
+ }
+ } 
+ }
+}
+            
+    

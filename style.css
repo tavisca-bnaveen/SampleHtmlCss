@@ -59,6 +59,17 @@ overflow: hidden;
 background-color:lavender;
 
 }
+.nav-right{
+    float: left;
+    
+    
+    height: 490px;
+    
+    overflow: hidden;
+    
+    background-color:white;
+    
+    }
 a li{
 
 list-style-type: none;
@@ -91,17 +102,7 @@ color: black;
 span{
     padding-left: 120px;   
 }
-.nav-right{
-float: left;
 
-
-height: 490px;
-
-overflow: auto;
-
-background-color:white;
-
-}
 table {
 font-family: arial, sans-serif;
 border-collapse: collapse;
@@ -110,12 +111,12 @@ width: 100%;
 th{
     border: 1px solid #dddddd;
     background-color: slategray;
-    text-align: left;
+    text-align: center;
     padding: 8px;  
 }
 td  {
 border: 1px solid #dddddd;
-text-align: left;
+text-align: center;
 padding: 8px;
 }
 
@@ -125,10 +126,18 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color:rgb(247, 250, 245);
 }
+tr:hover{
+    background-color:rgba(241, 238, 238, 0.849);
+}
 .text-box{
 border-radius: 5px;
 border-color: gray;
-
+width: 30%;
+height: 20px;
+}
+.text-button{
+border-radius: 5px;
+border-color: gray;
 }
 .side{
     border-radius: 4px;
@@ -144,7 +153,7 @@ border-color: gray;
 .heightdiv
 {
     height: 500px;
-    margin-bottom: 470px;
+    overflow:auto;
 }
 button{
     border-radius: 5px;
