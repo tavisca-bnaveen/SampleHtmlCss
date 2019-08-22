@@ -1,12 +1,13 @@
-    var books=["3mistakes","half girlfriend"];
+    
     function AddTodo()
     {
         var matter=document.getElementById("clicks");
         var book=matter.value;
-        books.push(book);
+        
         if(book){
         var d= new Date();
         var date=d.getDate()+"-"+d.getMonth()+"-"+d.getFullYear();
+        
         var Table=document.getElementById("tablename");
         
         var tr=document.createElement("tr");
@@ -46,14 +47,14 @@
 
         Table.appendChild(tr);
         }
+        
     }
               
     
 function remove(name)
 { 
     var text_value=name.parentElement.previousElementSibling.previousElementSibling.textContent;
-    var present=books.indexOf(text_value);
-    books.splice(present,1);
+    
     name.parentElement.parentElement.remove();   
 }
 function EDIT(name)
@@ -65,10 +66,9 @@ function EDIT(name)
     input_book.setAttribute("type","text");
     input_book.classList.add("text-box");
     input_book.setAttribute("value",book.textContent);
-
+    console.log(book.textContent);
     book.replaceChild(input_book,book.childNodes[0]);
-    var present=books.indexOf(book.textContent);
-    books.splice(present,1);
+    
      
     var input_date=document.createElement("input");
     input_date.setAttribute("type","text");
@@ -91,11 +91,13 @@ function Change(x)
     
     var book= x.parentElement.previousElementSibling;
     var booktext=x.parentElement.previousElementSibling.childNodes[0].value;
-    books.push(booktext);
+    //let date=x.parentElement.previousElementSibling.previousElementSibling.childNodes[0].value;
+    
     book.innerHTML=booktext;
     var date=x.parentElement.previousElementSibling.previousElementSibling;
     var datetext=x.parentElement.previousElementSibling.previousElementSibling.childNodes[0].value;
     date.innerHTML=datetext;
+    
     var edit_button=document.createElement("button");
     var edit=document.createTextNode("Edit");
     edit_button.appendChild(edit);
@@ -118,31 +120,20 @@ function Validate(element)
 
 function Focus(element)
 {
-    var divid=document.getElementById("focuselements");
-    divid.innerHTML="";  
+    var divid=document.getElementById("tablename");
+    let tablelen=document.getElementsByTagName("tr");
     var textvalue=element.value;
-    let arraybooks=[];
-    if(textvalue!="")
+    if(tablelen.length>1 && textvalue.length>0)
     {
-        for(var item in books)
+    for(var i=1;i<tablelen.length;i++)
+    {
+        let value=tablelen[i].childNodes[1].innerHTML;
+        if(value.indexOf(textvalue)==-1)
+            tablelen[i].style.display="none";
+        else
         {
-            if(books[item].indexOf(textvalue)!=-1)
-            {
-                arraybooks.push(books[item]);
-            }
+            tablelen[i].style.display="table-row";
         }
-              
-        for(var item in arraybooks)
-        {
-            var spanelement=document.createElement("span");
-            var spantext=document.createTextNode(arraybooks[item])
-            spanelement.appendChild(spantext);
-            divid.appendChild(spanelement);
-            divid.appendChild(document.createElement("br"));
-
-        }
-
-        //console.log(arraybooks);
     }
-
+    }
 }

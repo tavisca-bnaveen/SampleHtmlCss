@@ -172,4 +172,8 @@ button:focus{
     background-color:rgb(185, 181, 181);      
 }
 
+span{
+    
+    text-align: center;
+}
 
