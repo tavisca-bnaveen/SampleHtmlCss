@@ -135,17 +135,35 @@ function Focus(element)
 }
 function fetch()
 {
-    var xmlhttp = new XMLHttpRequest();
- xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
- xmlhttp.send();
- xmlhttp.onreadystatechange = function() {
- if (this.readyState == 4 && this.status == 200) {
- var myObj = JSON.parse(this.responseText);
- for(var i=0;i<myObj.length;i++){
-    AddTodo(myObj[i].title);
- }
- } 
- }
+    var loadingdiv=document.getElementById("loading");
+    var load=document.createElement("img");
+    load.setAttribute("src","giphy.gif");
+    load.setAttribute("height","70px");
+    
+    loadingdiv.style.display="block";
+    loadingdiv.appendChild(load);
+    setTimeout(() => {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        for(var i=0;i<myObj.length;i++){
+           AddTodo(myObj[i].title);
+        }
+        loadingdiv.style.display="none";
+        loadingdiv.innerHTML="";
+        } 
+        }
+    }, 2550);
+  
 }
-            
+function clearall()
+{
+    alert("tinnava");
+    var tableelement=document.getElementById("tablename");
+    tableelement.innerHTML="";
+}
+    
     
