@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+    <title>form</title>
+    
+</head>
+<body>
+    
+    <div  class="header">
+            <img src="0.png" alt="Tavisca"  width= "80px" height="80px">
+     </div>
+        <div class="grid-item-middle">
+        <div class="nav-left">
+                <ul>
+                        <a href="#TODO " class="side"><li>TODO</li></a>
+                        <a href="#USER " class="side"><li>USER</li></a>
+                        <a href="#LOGIN " class="side"><li>LOGIN</li></a>
+                </ul>
+        </div>
+            <div class="nav-right">
+                    <div id="TODO" class="heightdiv" >
+                        <h2 style="align-content: center"><p>To Do List</p></h2>
+                            <p > <input type="text" name="text" class="text-box" onkeyup="Focus(this)"  id="clicks">
+                                
+                                <button type="button" class="text-button"  onclick="AddTodo(this.previousElementSibling.value)">ADD</button>
+                                <button type="button" class="text-button" onclick="fetch()">Fetch</button></p>
+                                <!-- <button type="button" class="text-button" onclick="clearall()">ClearAll</button></p> -->
+                                <br>
+                                <div id="loading" class="loading"></div>
+                                <table id="tablename">
+                                        <tr>
+                                          <th>Date</th>
+                                          <th>Book</th>
+                                          <th>Edit</th>
+                                          <th>Delete</th>
+                                        </tr>
+                                        
+                                </table>
+                         </div>   
+                    <div id="USER" class="heightdiv">
+                            <br>
+                            <h1 ><u><p>USER DETAILS</p></u></h1>
+                            <br>
+                           <h3>  <p><b>Name </b>   : Bora Naveen<br><br>
+                                <b>Age </b>    : 21<br><br>
+                                <b>Username</b>: Naveenbora143</p></h3>
+                            </div>
+                            
+                            <div id="LOGIN" class="heightdiv">
+                                    <br><br>
+                                    <h1> <p> LOGIN</p></h1>
+                                <h3>
+                                  <p> Email&Tab;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<input type="text" name="name" class="text-box1"><br><br></p>
+                                  <p> Password :<input type="password" name="password" class="text-box1"><br><br></p>
+                                  <p><button type="button" onclick="Validate(this)">submit </button></p>
+                                </h3>
+                                    </div>
+                </div>
+    </div>
+
+    
+    
+    <div  class="footer">
+            <ul>
+                    <a href="example.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;" >HOME</li></a>
+                    <a href="About.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;">ABOUT</li></a>
+                    <a href="Contact.html"><li style="padding-left: 150px;display: inline;padding-right: 120px;font-size: 20px;">CONTACT US</li></a>
+                    </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+.grid-item {
+                
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    
+    
+    }
+.grid-item-middle{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+   }
+.header{
+background-color:rgba(37, 30, 30, 0.877);
+font-size: 2vw;
+padding: 0px;
+height: 80px;
+overflow: hidden;
+top: 0%;
+margin: 0%;
+width: 100%;
+
+}
+.footer{
+background-color:rgba(37, 30, 30, 0.877);
+padding: 20px;
+font-size: 2vw;
+overflow: hidden;
+
+bottom: 0;
+margin: 0%;
+width: 97%;
+
+}
+.footer ul{
+margin: 0;
+padding: 0;
+
+
+
+}
+.footer ul li{
+padding-left: 200px;
+display: inline;
+padding-right: 100px;
+font-size: 20px;
+
+
+
+}
+.nav-left{
+float: left;
+
+height: 490px;
+
+overflow: hidden;
+
+background-color:lavender;
+
+}
+.nav-right{
+    float: left;
+    
+    
+    height: 490px;
+    
+    overflow: hidden;
+    
+    background-color:white;
+    
+    }
+a li{
+
+list-style-type: none;
+margin: 20px;
+
+text-decoration: none;
+display: block;
+padding: 15px ;
+border: 2px solid black;
+color: #000;
+padding-left: 0%;
+text-align: center;
+align-content: center;
+border-radius: 6px;
+
+}
+a{
+text-decoration: none; 
+
+
+}
+a li:hover{
+background-color:rgb(185, 181, 181);
+
+}
+p{
+padding-left: 120px;
+color: black;
+}
+span{
+    padding-left: 120px;   
+}
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+th{
+    border: 1px solid #dddddd;
+    background-color: slategray;
+    text-align: center;
+    padding: 8px;  
+}
+td  {
+border: 1px solid #dddddd;
+text-align: center;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(247, 250, 245);
+}
+tr:nth-child(odd) {
+    background-color:rgb(247, 250, 245);
+}
+tr:hover{
+    background-color:rgba(241, 238, 238, 0.849);
+}
+.text-box{
+border-radius: 5px;
+border-color: gray;
+width: 30%;
+height: 20px;
+}
+.text-button{
+border-radius: 5px;
+border-color: gray;
+}
+.side{
+    border-radius: 4px;
+}
+.text-box:focus{
+    outline: none;
+}
+.text-box1{
+    width: 30%;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+.heightdiv
+{
+    height: 500px;
+    overflow:auto;
+}
+button{
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px ;
+
+}
+button:hover{
+    background-color: rgb(185, 181, 181);
+}
+button:focus{
+    outline: none;
+}
+.edit-color{
+    background-color:gray ;
+
+}
+.edit-color:hover{
+    background-color:rgb(185, 181, 181);
+}
+.delete-color{
+    background-color:gray;     
+}
+.delete-color:hover{
+    background-color:rgb(185, 181, 181);      
+}
+
+span{
+    
+    text-align: center;
+}
+
+.loading{
+    padding-left: 38%;
+}
